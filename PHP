@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    <!-- header  -->
+
+<header class="header">
+
+<a href="#" class="logo"> <i class="fas fa-tooth"></i> dentalcare. </a>
+
+
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+    
+<br><br><br><br><br>
+<!----login form------>
+<br><br><br><br><br>
+<div class="container">
+    <div class="imag">
+        <img src="image/Login-amico.svg">
+    </div>
+    <div class="login-content">
+        <form action="validation.php" method="post">
+            <img src="image/avatar.svg">
+            <h2 class="title">Dental care</h2>
+
+               <div class="input-div one">
+                  <div class="i">
+                          <i class="fas fa-user"></i>
+                  </div>
+                  <div class="div">
+                          <h5>Username</h5>
+                          <input type="text" class="input" name="username">
+                  </div>
+               </div>
+               <div class="input-div pass">
+                  <div class="i"> 
+                       <i class="fas fa-lock"></i>
+                  </div>
+                  <div class="div">
+                       <h5>Password</h5>
+                       <input type="password" class="input" name="password" autocomplete="current-password" id="id_password">
+                       
+               </div>
+               <i class="far fa-eye" id="togglePassword" style="margin-right: -650px;
+               margin-top:-15px; cursor: pointer;"></i>
+
+            </div>
+            <input type="submit" class="btn" value="Login" ><br><br>
+            <a href="registration.php">Register now</a>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#id_password');
+
+togglePassword.addEventListener('click', function (e) {
+  // toggle the type attribute
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  // toggle the eye slash icon
+  this.classList.toggle('fa-eye-slash');
+});
+</script>
+
+</body>
+</html>
+<html>
+<head>
+<title>Doctor view</title>
+<style type="text/css">
+table {
+    border:2px solid red;
+    background-color: #ffc;
+}
+th {
+    border-bottom: 5px solid #000;
+}
+td{
+    border-bottom: 2px solid #666;
+}
+</style>
+</head>
+<body>
+<h1>display data</h1>
+<?php
+include('connect-db.php');
+$sqlget="SELECT * from book where doctor = 'Dr. Deo Brand'";
+$sqldata=mysqli_query($dbcon,$sqlget) or die('error');
+echo "<table>";
+echo "<tr><th>Name</th><th>number</th><th>time</th><th>date</th></tr>";
+while($row= mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    echo "<tr><td>";
+    echo$row['yourname'];
+    echo"</td><td>";
+    
+    echo$row['yournumber'];
+    echo"</td><td>";
+    echo$row['date'];
+    echo"</td><td>";
+    echo$row['time'];
+    echo"</td><td>";
+}
+echo"</table>";
+
+?>
+</body>
+
+</html>
+<html>
+<head>
+<title>Doctor view</title>
+<style type="text/css">
+table {
+    border:2px solid red;
+    background-color: #ffc;
+}
+th {
+    border-bottom: 5px solid #000;
+}
+td{
+    border-bottom: 2px solid #666;
+}
+</style>
+</head>
+<body>
+<h1>display data</h1>
+<?php
+include('connect-db.php');
+$sqlget="SELECT * from book where doctor = 'Dr. Caesar'";
+$sqldata=mysqli_query($dbcon,$sqlget) or die('error');
+echo "<table>";
+echo "<tr><th>Name</th><th>number</th><th>time</th><th>date</th></tr>";
+while($row= mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    echo "<tr><td>";
+    echo$row['yourname'];
+    echo"</td><td>";
+    
+    echo$row['yournumber'];
+    echo"</td><td>";
+    echo$row['date'];
+    echo"</td><td>";
+    echo$row['time'];
+    echo"</td><td>";
+}
+echo"</table>";
+
+?>
+</body>
+
+</html>
+<html>
+<head>
+<title>Doctor view</title>
+<style type="text/css">
+table {
+    border:2px solid red;
+    background-color: #ffc;
+}
+th {
+    border-bottom: 5px solid #000;
+}
+td{
+    border-bottom: 2px solid #666;
+}
+</style>
+</head>
+<body>
+<h1>display data</h1>
+<?php
+include('connect-db.php');
+$sqlget="SELECT * from book where doctor = 'Dr. Mohamed'";
+$sqldata=mysqli_query($dbcon,$sqlget) or die('error');
+echo "<table>";
+echo "<tr><th>Name</th><th>number</th><th>time</th><th>date</th></tr>";
+while($row= mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    echo "<tr><td>";
+    echo$row['yourname'];
+    echo"</td><td>";
+    
+    echo$row['yournumber'];
+    echo"</td><td>";
+    echo$row['date'];
+    echo"</td><td>";
+    echo$row['time'];
+    echo"</td><td>";
+}
+echo"</table>";
+
+?>
+</body>
+
+</html>
+<html>
+<head>
+<title>Doctor view</title>
+<style type="text/css">
+table {
+    border:2px solid red;
+    background-color: #ffc;
+}
+th {
+    border-bottom: 5px solid #000;
+}
+td{
+    border-bottom: 2px solid #666;
+}
+</style>
+</head>
+<body>
+<h1>display data</h1>
+<?php
+include('connect-db.php');
+$sqlget="SELECT * from book where doctor = 'Dr. kujo Jutaro'";
+$sqldata=mysqli_query($dbcon,$sqlget) or die('error');
+echo "<table>";
+echo "<tr><th>Name</th><th>number</th><th>time</th><th>date</th></tr>";
+while($row= mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    echo "<tr><td>";
+    echo$row['yourname'];
+    echo"</td><td>";
+    
+    echo$row['yournumber'];
+    echo"</td><td>";
+    echo$row['date'];
+    echo"</td><td>";
+    echo$row['time'];
+    echo"</td><td>";
+}
+echo"</table>";
+
+?>
+</body>
+
+</html>
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location:account.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+ 
+
+<!-- header  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-tooth"></i> dentalcare. </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#doctors">doctors</a>
+        <a href="#book">book</a>
+        <a href="#review">review</a>
+        <a href="logout.php">LOG OUT</a>
+
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+
+
+<!-- home -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="image/Online Doctor-amico.svg" alt="">
+    </div>
+
+    <div class="content">
+        <h3>We care about your Smile!</h3>
+        <p>If you are looking for a reliable dentist in town, we are here to help. We are known for the best, affordable, and painless dental treatments.
+
+        </p>
+        <a href="contactus.php" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
+    </div>
+
+</section>
+
+
+<!-- icons -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <p>Expert doctors</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <p>satisfied patients</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-syringe"></i>
+        <p>advanced equipments</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-clinic-medical"></i>
+
+        <p>Modren clinics</p>
+    </div>
+
+</section>
+
+
+<!-- services -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> our <span>services</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Cosmetic Dentistry</h3>
+            <p>We offer affordable tooth bleaching and alignment treatments you may need..</p>
+            </div>
+
+        <div class="box">
+            <h3>Dental X-Rays​</h3>
+            <p>No treatment is started without an x-ray taken from our high-end x-ray machine.</p>
+        </div>
+
+        <div class="box">
+            <h3>Root Canals​</h3>
+            <p>With us you get the fastest and painless root canal treatments done quickly.</p>
+        </div>
+
+        <div class="box">
+            <h3>Teeth Whitening
+            </h3>
+            <p>Whether it is just cleaning or polishing, get a brighter smile while you walk out.</p>
+        </div>
+
+        <div class="box">
+            <h3>Dental Implants
+            </h3>
+            <p>We help you get a new set of teeth or a single tooth that matches your smile.</p>
+        </div>
+
+        <div class="box">
+            <h3>Braces & Implants
+            </h3>
+            <p>We use and recommend Invisalign braces for better results of teeth alignment.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- about -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/Health professional team-rafiki.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Committed to the Dental Excellence
+            </h3>
+            <p>We are known for the most affordable and painless dental
+                treatments that our clients have been loving for years. Whether it is cosmetic dental treatments, root canals, tooth extraction, or more, we assure the best help in a comfortable and friendly environment. We’ve built relationships with thousands of clients for simple consultations and surgeries too.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- doctors -->
+
+<section class="doctors" id="doctors">
+
+    <h1 class="heading"> our <span>doctors</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/doc-6.jpg" alt="">
+            <h3>Seif Hashem</h3>
+            <span>expert doctor</span><br>
+            <span>Braces & implants</span>
+           
+        </div>
+
+        <div class="box">
+            <img src="image/doc-2.jpg" alt="">
+            <h3>Hussin Fekry</h3><br>
+            <span>expert doctor</span><br>
+            <span>surgery</span>
+        
+        </div>
+
+        <div class="box">
+            <img src="image/doc-3.jpg" alt="">
+            <h3>deo brand</h3><br>
+            <span>expert doctor</span><br>
+            <span>implants</span>
+
+       
+        </div>
+
+        <div class="box">
+            <img src="image/doc-4.jpg" alt="">
+            <h3>caesar anthonio</h3>
+            <span>expert doctor</span><br>
+         <span>Reconstruction</span>
+        </div>
+
+        <div class="box">
+            <img src="image/doc-5.jpg" alt="">
+            <h3>Mohamed Abdul</h3>
+            <span>expert doctor</span><br>
+           <span>Cosmetic</span>
+        </div>
+
+        <div class="box">
+            <img src="image/doc-1.jpg" alt="">
+            <h3>kujo jotaro</h3>
+            <span>expert doctor</span><br>
+            <span>cosmetic</span>
+          
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- booking -->
+
+<section class="book" id="book">
+
+    <h1 class="heading"> <span>book</span> now </h1>    
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/Date picker-rafiki.svg" alt="">
+        </div>
+
+        <form action="book.php" method="post">
+            <h3>book appointment</h3>
+            <input type="text" placeholder="your name" class="box" name="yourname" pattern="[a-zA-Z'-'\s]*" required>
+            <input type="text" placeholder="your number" class="box" name="yournumber" pattern="^01[0-2,5]\d{8}$" required>
+            <input type="email" placeholder="your email" class="box" name="youremail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required>
+            <input type="date" class="box" name="date" required>
+            <input type="time" class="box" name="time" required>
+            <div class="box-3" >
+            <input list="doctor" placeholder="doctors" name="doctor" required>
+            <datalist id="doctor">
+                <option value="Dr. Seif Hashem"></option>
+                <option value="Dr. Hussin fekry"></option>
+                <option value="Dr. Deo Brand"></option>
+                <option value="Dr. Caesar Anthonio"></option>
+                <option value="Dr. Mohamed Abdul"></option>
+                <option value="Dr. Kujo Jotaro"></option>
+
+            </datalist>
+            </div>
+
+            <input type="submit" value="book now" class="btn" >
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- review -->
+
+<section class="review" id="review">
+    
+    <h1 class="heading"> client's <span>review</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/pic-1.png" alt="">
+            <h3>john fillips</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">This is a great place to go take care of your teeth. The team was very professional examining and providing with solutions by priority.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/pic-2.png" alt="">
+            <h3>sara clay</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text"> The best dental care I have ever experienced! Professional, courteous, and friendly staff made me feel like family… would highly recommend to anyone!!!</p>
+        </div>
+
+        <div class="box">
+            <img src="image/pic-3.png" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">The staff was great. Very welcoming and friendly. The dentist was very nice and informative. </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- footer -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+        </div>
+
+        <div class="box">
+            <h3>our services</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> Cosmetic Dentistry
+            </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> message therapyDental X-Rays​
+                cardioloty </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> Root Canals​
+            </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> Teeth Whitening
+            </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> 19945 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +201065454395 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> dentalcare@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Egypt, Cairo </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+      
+        </div>
+
+    </div>
+
+    <div class="credit">  <span>Dental Care</span> | all rights reserved </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="checkout.js" ></script>
+
+</body>
+</html>
+<?php
+session_start();
+session_destroy();
+header('location:account.php');
+?>
+<?php
+$name = $_POST['name'];
+$mail = $_POST['mail'];
+$message = $_POST['message'];
+
+//database connection
+$conn = new mysqli('localhost','root','','book');
+if($conn->connect_error){
+    die('connection failed :' .$conn->connect_error);
+}
+else
+{
+    $stmt = $conn-> prepare("insert into mail(name,mail,message) values(?, ?, ?)");
+    $stmt->bind_param("sss", $name,$mail,$message);
+    $stmt->execute();
+echo '<script type="text/javascript">'; 
+echo 'alert("message stored.");'; 
+echo 'window.location.href = "contactus.php";';
+echo '</script>';
+
+}
+
+?>
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location:account.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --blue:#179db4;
+    --black:#444;
+    --light-color:#777;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border:.2rem solid var(--blue);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+    background: ;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size: 17px;
+}
+.border{
+margin: auto;
+border: 3px solid #179db4;
+padding: 60px;
+text-align: center;
+position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border:var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color:var(--blue);
+    cursor: pointer;
+    font-size: 1.4rem;
+    background: #fff;
+}
+.btn span{
+    padding:.7rem 1rem;
+    border-radius: .5rem;
+    background: var(--blue);
+    color:#fff;
+    margin-left: .5rem;
+}
+
+.btn:hover{
+    background: var(--blue);
+    color:#fff;
+}
+
+.btn:hover span{
+    color: var(--blue);
+    background:#fff;
+    margin-left: 1rem;
+}
+</style>
+
+</head>
+<body>
+<!-- header  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-tooth"></i> dentalcare. </a>
+
+    <nav class="navbar">
+    <a href="index.php">home</a>
+        <a href="index.php">services</a>
+        <a href="index.php">about</a>
+        <a href="index.php">doctors</a>
+        <a href="index.php">book</a>
+        <a href="index.php">review</a>
+        <a href="logout.php">LOG OUT</a>
+
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header> 
+
+<div class="border">
+<p> Do you want to Pay Online?</p><br>
+  <button type="submit" class="btn" id="pbtn" onclick="document.location='checkout.php'">Pay Online</button> &nbsp; &nbsp;
+  <script>src="http://js.stripe.com/v3/"</script>
+  <script>src="script.js"</script>
+  <button type="submit" class="btn" onclick="document.location='index.php'">Cancel</button>
+</div>
+
+</body>
+</html>
+<?php
+session_start();
+$con=mysqli_connect('localhost','root','');
+mysqli_select_db($con, 'server');
+
+$username= $_POST['username'];
+$yourage= $_POST['yourage'];
+$yournumber= $_POST['yournumber'];
+$email= $_POST['email'];
+$password= $_POST['password'];
+$natid= $_POST['natid'];
+$gender= $_POST['gender'];
+$file= $_POST['file'];
+
+$s="select * from server where username = '$username'";
+$result = mysqli_query($con, $s);
+$num = mysqli_num_rows($result);
+if($num==1){
+    echo '<script type="text/javascript">'; 
+    echo 'alert("This name has already been used! please choose another name");'; 
+    echo 'window.location.href = "registration.php";';
+    echo '</script>';
+
+}else{
+    $stmt = $con-> prepare("insert into server(username, yourage, yournumber, email, password, natid, gender,file) values(?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("siisiiss", $username, $yourage, $yournumber, $email, $password, $natid, $gender, $file);
+    $stmt->execute();
+    echo '<script type="text/javascript">'; 
+    echo 'alert("Registered successfuly");'; 
+    echo 'window.location.href = "account.php";';
+    echo '</script>';
+}
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    
+<!-- header  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-tooth"></i> dentalcare. </a>
+
+
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+<style>
+    #message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+</style>
+</header>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!---Registration-->
+<section class="register" >
+
+
+    <div class="row">
+
+       
+
+        <form action="register.php" method="post">
+            <h3>Registration</h3>
+            <input type="text" placeholder="username" class="box" name="username"  required>
+            <input type="text" placeholder="your number" class="box" name="yournumber" pattern="^01[0-2,5]\d{8}$"required > 
+            <input type="text" placeholder="your age" class="box" name="yourage" required > 
+            <input type="email" placeholder="email" class="box" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required>
+            <input type="password" placeholder="Password" class="box" name="password" autocomplete="current-password" id="id_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required>
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -17px; cursor: pointer;"></i>
+            <div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+            <input type="text" placeholder="National ID" class="box" name="natid" pattern= "[23](?:[0-9]{2}(?:(?:(?:0[13578]|1[02])(?:0[1-9]|[12][0-9]|3[01]))|(?:(?:0[469]|11)(?:0[1-9]|[12][0-9]|30))|(?:02(?:0[1-9]|1[0-9]|2[0-8])))|(?:(?:04|08|[2468][048]|[13579][26]|(?<=3)00)0229))(?:0[1-4]|[12][1-9]|3[1-5]|88)[0-9]{4}[1-9]"  required>
+            <div class="box-2" >
+                <input list="gender" placeholder="Gender" name="gender" required>
+                <datalist id="gender">
+                    <option value="Male"></option>
+                    <option value="Female"></option>
+                </datalist>
+                </div>
+                <h4>*if you want to upload any scans, tests or old prescriptions press choose file</h4>
+
+                <input type="file" placeholder="" class="box" name="file"><br>
+
+
+
+
+            <input type="submit" value="Register Now" class="btn" >
+            
+            
+        </form>
+
+</section>
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<!--- pw toggle script-->
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#id_password');
+
+togglePassword.addEventListener('click', function (e) {
+  // toggle the type attribute
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  // toggle the eye slash icon
+  this.classList.toggle('fa-eye-slash');
+});
+</script>
+
+<!--- pw validation script-->
+
+<script>
+var myInput = document.getElementById("id_password");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+</body>
+</html>
+<?php
+session_start();
+$con=mysqli_connect('localhost','root','');
+mysqli_select_db($con, 'server');
+
+$username= $_POST['username'];
+$password= $_POST['password'];
+
+$s="select * from server where username = '$username' && password ='$password'";
+$result = mysqli_query($con, $s);
+$num = mysqli_num_rows($result);
+if($num == 1){
+    $_SESSION['username'] = $username;
+    header('location: index.php');
+
+}else{
+    echo '<script type="text/javascript">'; 
+    echo 'alert("Wrong username or password! Try again");'; 
+    echo 'window.location.href = "account.php";';
+    echo '</script>';
+}
+
+
+?>
+
+<?php
+$yourname = $_POST['yourname'];
+$yournumber = $_POST['yournumber'];
+$youremail = $_POST['youremail'];
+$date = $_POST['date'];
+$time = $_POST['time'];
+$doctor = $_POST['doctor'];
+
+//database connection
+$conn = new mysqli('localhost','root','','book');
+$s="select * from book where time = '$time' && date='$date' && doctor='$doctor'";
+$result = mysqli_query($conn, $s);
+$num = mysqli_num_rows($result);
+if($conn->connect_error){
+    die('connection failed :' .$conn->connect_error);
+}
+else
+{
+    if($num==1){
+        echo '<script type="text/javascript">'; 
+        echo 'alert("sorry! this date and time has already been booked, try again ");'; 
+        echo 'window.location.href = "index.php";';
+        echo '</script>';
+    }
+    else{
+    $stmt = $conn-> prepare("insert into book(yourname, yournumber, youremail, date, time, doctor) values(?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sissss", $yourname, $yournumber, $youremail, $date, $time, $doctor);
+    $stmt->execute();
+echo '<script type="text/javascript">'; 
+echo 'alert("Booking successful");'; 
+echo 'window.location.href = "paybutt.php";';
+echo '</script>';
+    }
+
+
+}
+
+?>
+
+
+
+<html>
+<head>
+<title>dental care</title>
+<style type="text/css">
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: #179db4;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover {
+    color: black;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+
+</style>
+</head>
+<body>
+<nav>
+  <ul>
+    
+  <a href="drview.php"><li >
+      Dr. Seif Hashem
+      <span></span><span></span><span></span><span></span>
+    </li> </a>
+    <a href="drview2.php"><li>
+      Dr. Hussin Fekry
+      <span></span><span></span><span></span><span></span>
+    </li></a>
+    <a href="drview3.php"><li>
+    Dr. deo brand
+      <span></span><span></span><span></span><span></span>
+    </li></a>
+    <a href="drview4.php"><li>
+    Dr. caesar anthonio
+      <span></span><span></span><span></span><span></span>
+    </li></a>
+    <a href="drview5.php"><li>
+    Dr. Mohamed Abdul
+      <span></span><span></span><span></span><span></span>
+    </li></a>
+    <a href="drview6.php"><li>
+    Dr. kujo jotaro
+      <span></span><span></span><span></span><span></span>
+    </li></a>
+  </ul>
+</nav></body>
+</html>
+<?php
+
+require 'vendor/autoload.php';
+// This is your test secret API key.
+\Stripe\Stripe::setApiKey('sk_test_51KHw2nJlt27XPt2lVKvpOYs0UiFKwEWIUDmyIJHkizIxs92BaktUDWoNIml8U154jZ3DTPhdARkXuPc7BAFNv1sV00AiKpHohE');
+
+header('Content-Type: application/json');
+
+$YOUR_DOMAIN = 'http://localhost';
+
+$checkout_session = \Stripe\Checkout\Session::create([
+"payment_method_types"=>['card'],
+"mode"=>'payment',
+"line_items"=>[
+	[
+		"price_data"=>[
+			"currency"=> "egp",
+			"product_data"=> [
+			"name"=> "Reservation",
+			
+			],
+			"unit_amount" => 50000
+		],
+		"quantity"=> 1
+	]
+    ],
+    'success_url' => $YOUR_DOMAIN . '/index.php',
+    'cancel_url' => $YOUR_DOMAIN . '/index.php',
+]);
+
+header("HTTP/1.1 303 See Other");
+header("Location: " . $checkout_session->url);
+<?php
+DEFINE ('DB_USER','root');
+DEFINE ('DB_PSWD','');
+DEFINE ('DB_HOST','localhost');
+DEFINE ('DB_NAME','book');
+$dbcon= mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
+
+?>
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location:account.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+ 
+<!-- header  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-tooth"></i> dentalcare. </a>
+
+    <nav class="navbar">
+        <a href="index.php">home</a>
+        <a href="index.php">services</a>
+        <a href="index.php">about</a>
+        <a href="index.php">doctors</a>
+        <a href="index.php">book</a>
+        <a href="index.php">review</a>
+        <a href="logout.php">LOG OUT</a>
+
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+
+  <!-- contact1 -->
+  <br>
+  <section>
+      <br><br><br><br>
+    <div class="container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">26th of July Corridor, Sheikh Zayed City, Giza Governorate</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">19945</div>
+              <div class="text-two">+201065454395</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">dentalcare347@gmail.com</div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="topic-text">Send us a message</div>
+          <form action="mail.php" method="POST"> 
+            <div class="input-box">
+              <input type="text" placeholder="Enter your name" name="name" required>
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Enter your email" name="mail" required>
+            </div>
+  
+            <div class="input-box message-box">
+              <textarea placeholder="Enter your message" name="message" required></textarea>
+            </div>
+              <input type="submit" value="Send Now" class="btn" >
+           
+          </form>
+        </div>
+        </div>
+      </div>
+    
+  </section>
+
+
+
+
+
+<!-- footer -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+        </div>
+
+        <div class="box">
+            <h3>our services</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> Cosmetic Dentistry
+            </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> message therapyDental X-Rays
+                cardioloty </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> Root Canals
+            </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> Teeth Whitening
+            </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> 19945 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +201065454395 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> dentalcare@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Egypt, Cairo </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+      
+        </div>
+
+    </div>
+
+    <div class="credit">  <span>Dental Care</span> | all rights reserved </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+ <!--contact section end-->
+
+ <script type="text/javascript">
+    if(window.history.replaceState){
+      window.history.replaceState(null, null, window.location.href);
+    }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    <!-- header  -->
+
+<header class="header">
+
+<a href="#" class="logo"> <i class="fas fa-tooth"></i> dentalcare.</a>
+
+
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+    
+<br><br><br><br><br>
+<!----login form------>
+<br><br><br><br><br>
+<div class="container">
+    <div class="imag">
+        <img src="image/Login-amico.svg">
+    </div>
+    <div class="login-content">
+        <form action="drvalidation.php" method="post">
+            <img src="image/avatar.svg">
+            <h2 class="title">Dental care <BR>dOCTORS</h2>
+
+               <div class="input-div one">
+                  <div class="i">
+                          <i class="fas fa-user"></i>
+                  </div>
+                  <div class="div">
+                          <h5>Username</h5>
+                          <input type="text" class="input" name="drname">
+                  </div>
+               </div>
+               <div class="input-div pass">
+                  <div class="i"> 
+                       <i class="fas fa-lock"></i>
+                  </div>
+                  <div class="div">
+                       <h5>Password</h5>
+                       <input type="password" class="input" name="drpassword">
+               </div>
+            </div>
+           
+            <input type="submit" class="btn" value="Login" ><br><br>
+
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+<body>
+    
+<!-- header  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-tooth"></i> dentalcare. </a>
+
+
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!---Registration-->
+<section class="register" >
+
+
+    <div class="row">
+
+       
+
+        <form action="drregister.php" method="post">
+            <h3>Registration</h3>
+            <input type="text" placeholder="username" class="box" name="drname" required>
+            <input type="password" placeholder="password" class="box" name="drpassword" required>
+<br>
+            <input type="submit" value="Register Now" class="btn" >
+            
+        </form>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
+<?php
+session_start();
+$con=mysqli_connect('localhost','root','');
+mysqli_select_db($con, 'server');
+
+$drname= $_POST['drname'];
+$drpassword= $_POST['drpassword'];
+
+
+$s="select * from drreg where drname = '$drname'";
+$result = mysqli_query($con, $s);
+$num = mysqli_num_rows($result);
+if($num==1){
+    echo '<script type="text/javascript">'; 
+    echo 'alert("This name has already been used! please choose another name");'; 
+    echo 'window.location.href = "drreg.php";';
+    echo '</script>';
+
+}else{
+    $stmt = $con-> prepare("insert into drreg(drname,drpassword) values(?, ?)");
+    $stmt->bind_param("si", $drname,$drpassword);
+    $stmt->execute();
+    echo '<script type="text/javascript">'; 
+    echo 'alert("Registered successfuly");'; 
+    echo 'window.location.href = "drlogin.php";';
+    echo '</script>';
+}
+
+
+?>
+<?php
+session_start();
+$con=mysqli_connect('localhost','root','');
+mysqli_select_db($con, 'server');
+
+$drname= $_POST['drname'];
+$drpassword= $_POST['drpassword'];
+
+$s="select * from drreg where drname = '$drname' && drpassword ='$drpassword'";
+$result = mysqli_query($con, $s);
+$num = mysqli_num_rows($result);
+if($num == 1){
+    $_SESSION['drname'] = $drname;
+    header('location: buttons.php');
+
+}else{
+    echo '<script type="text/javascript">'; 
+    echo 'alert("Wrong username or password! Try again");'; 
+    echo 'window.location.href = "drlogin.php";';
+    echo '</script>';
+}
+
+
+?>
+
+<html>
+<head>
+<title>Doctor view</title>
+<style type="text/css">
+table {
+    border:2px solid red;
+    background-color: #ffc;
+}
+th {
+    border-bottom: 6px solid #000;
+}
+td{
+    border-bottom: 4px solid #666;
+}
+</style>
+</head>
+<body>
+<h1>display data</h1>
+<?php
+include('connect-db.php');
+$sqlget="SELECT * from book where doctor = 'Dr. Seif Hashem'";
+$sqldata=mysqli_query($dbcon,$sqlget) or die('error');
+echo "<table>";
+echo "<tr><th>Name</th><th>number</th><th>date</th><th>time</th></tr>";
+while($row= mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    echo "<tr><td>";
+    echo$row['yourname'];
+    echo"</td><td>";
+    
+    echo$row['yournumber'];
+    echo"</td><td>";
+    echo$row['date'];
+    echo"</td><td>";
+    echo$row['time'];
+    echo"</td><td>";
+}
+echo"</table>";
+
+?>
+</body>
+
+</html>
+<html>
+<head>
+<title>Doctor view</title>
+<style type="text/css">
+table {
+    border:2px solid red;
+    background-color: #ffc;
+}
+th {
+    border-bottom: 5px solid #000;
+}
+td{
+    border-bottom: 2px solid #666;
+}
+</style>
+</head>
+<body>
+<h1>display data</h1>
+<?php
+include('connect-db.php');
+$sqlget="SELECT * from book where doctor = 'Dr. Hussin Fekry'";
+$sqldata=mysqli_query($dbcon,$sqlget) or die('error');
+echo "<table>";
+echo "<tr><th>Name</th><th>number</th><th>date</th><th>time</th></tr>";
+while($row= mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    echo "<tr><td>";
+    echo$row['yourname'];
+    echo"</td><td>";
+    
+    echo$row['yournumber'];
+    echo"</td><td>";
+    echo$row['date'];
+    echo"</td><td>";
+    echo$row['time'];
+    echo"</td><td>";
+}
+echo"</table>";
+
+?>
+</body>
+
+</html>
